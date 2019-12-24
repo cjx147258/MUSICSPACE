@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<style>
+	#myP{
+				float: left;
+			}
+</style>
+<body>
+<div class="panel admin-panel">
+  <!--<div class="panel-head"><strong class="icon-reorder"> 音乐设置</strong></div>-->
+  <!--<div class="padding border-bottom">  
+  <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加内容</button>
+  </div>
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="7.7%">歌曲id</th>
+      <th width="7.7%">歌曲名</th>
+      <th width="7.7%">热度</th>
+      <th width="7.7%">所属专辑id</th>
+      <th width="7.7%">所属专辑名称</th>
+      <th width="7.7%">文件地址</th>
+      <th width="7.7%">上传时间</th>
+      <th width="7.7%">歌手id</th>
+      <th width="7.7%">歌手姓名</th>
+      <th width="7.7%">时长</th>
+      <th width="7.7%">封面图</th>
+      <th width="15.3%">操作</th>
+
+    </tr>
+   
+    <tr>
+      <td>1</td>     
+      <td>1</td>     
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td> 
+      <td>1</td> 
+      <td>1</td> 
+      <td>1</td> 
+      <td>1</td> 
+      <td><img src="images/11.jpg" alt="" width="120" height="50" /></td>
+      <td><div class="button-group">
+      <a class="button border-main" href="#add"><span class="icon-edit"></span> 修改</a>
+      <a class="button border-red" href="javascript:void(0)" onclick="return del(1,1)"><span class="icon-trash-o"></span> 删除</a>
+      </div></td>
+    </tr>
+    <tr>
+      <td>2</td>     
+      <td>2</td>     
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td> 
+      <td>2</td> 
+      <td>2</td> 
+      <td>2</td> 
+      <td><img src="images/11.jpg" alt="" width="120" height="50" /></td>
+      <td><div class="button-group">
+      <a class="button border-main" href="#add"><span class="icon-edit"></span> 修改</a>
+      <a class="button border-red" href="javascript:void(0)" onclick="return del(1,1)"><span class="icon-trash-o"></span> 删除</a>
+      </div></td>
+    </tr>
+    <tr>
+      <td>3</td>     
+      <td>3</td>     
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td> 
+      <td>3</td> 
+      <td>3</td> 
+      <td>3</td> 
+      <td><img src="images/11.jpg" alt="" width="120" height="50" /></td>
+      <td><div class="button-group">
+      <a class="button border-main" href="#add"><span class="icon-edit"></span> 修改</a>
+      <a class="button border-red" href="javascript:void(0)" onclick="return del(1,1)"><span class="icon-trash-o"></span> 删除</a>
+      </div></td>
+    </tr>
+    
+  </table>
+</div>
+<script type="text/javascript">
+function del(id,mid){
+	if(confirm("您确定要删除吗?")){
+	
+	}
+}
+</script>-->
+<div class="panel admin-panel margin-top" id="add">
+  <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 增加音乐</strong></div>
+  <div class="body-content">
+    <form method="get" class="form-x" action="MusicAddServlet">
+    <input type="hidden" name="flag" value="add">    
+      <!--<div class="form-group">
+        <div class="label">
+          <label>歌曲id：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="" name="id" data-validate="required:请输入歌曲id" />
+          <div class="tips"></div>
+        </div>
+      </div>-->
+      <div class="form-group">
+        <div class="label">
+          <label>歌曲名：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="name" value="" />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>热度：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="heat" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>所属专辑id：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="album_id" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>所属专辑名称：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="album_id" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>文件地址：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="music_url" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+   
+      <div class="form-group">
+        <div class="label">
+          <label>歌手id：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="singer_id" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>歌手姓名：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="singer_name" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>时长：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="time" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>封面图：</label>
+        </div>
+        <div class="field">
+          <input type="text" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" />
+          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;">
+          <div class="tipss">图片尺寸：1920*500</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+</script>
+</body></html>
